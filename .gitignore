@@ -1,0 +1,11 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea
+Scripts
+Lib
+Include
+venv
+client_secret.json
+credentials.json
+credentials.pkl
+pip-selfcheck.json
+pyvenv.cfg

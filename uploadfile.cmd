@@ -1,2 +1,2 @@
 @echo off
-uploadfile.py %1
+uploadfile.py %1 %2 %3

@@ -47,6 +47,9 @@ def execute(instance):
     except HTTPError as e:
         if e.code == 401:
             raise RefreshError('invalid_grant: Token has been expired or revoked.')
+        elif e.code == 403:
+            content = loads(e.fp.read().decode('utf-8'))
+            raise Exception(content.get('error', {}).get('message', 'Unknown error from google'))
         raise
 
 

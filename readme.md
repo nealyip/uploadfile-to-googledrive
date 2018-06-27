@@ -56,7 +56,7 @@ UPLOAD_AUTH_USING=manual uploadfile film.mp4
 # Env variable #
 UPLOAD_CHUNKSIZE : in KB, the size for each chunk. Use a large value to speed up or a low value in a slower network to prevent failure, 4096 by default.  
 UPLOAD_AUTH_USING : set it to manual if you are not running from your local computer, such as server under ssh. You are required to paste the authorization code manually. 
-Or skip this to use local server mode by default. The port 9004 will be used to listen the response from google. However, there is no need to forward 9004 port outside.
+Or skip this to use local server mode by default. The port 9004 will be used to listen the response from google. However, there is no need to forward 9004 port outside.  
 UPLOAD_LOCAL_SERVER_PORT : 9004 by default  
 
 # Revoke access #

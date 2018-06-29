@@ -36,3 +36,5 @@ if __name__ == '__main__':
         print(e)
         if a.verbose is None:
             raise
+    except KeyboardInterrupt:
+        os.sys.exit(0)

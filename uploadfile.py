@@ -24,13 +24,8 @@ def run(a):
     isdir = os.path.isdir(a.file)
     assert not isdir, '%s is a directory' % a.file
 
-    try:
-        create_creds_folder()
-        Drive().upload(a.file)
-    except Exception as e:
-        print(e)
-        if a.verbose is None:
-            raise
+    create_creds_folder()
+    Drive().upload(a.file)
 
 
 if __name__ == '__main__':

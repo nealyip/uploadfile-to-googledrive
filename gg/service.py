@@ -149,7 +149,7 @@ class DriveAPI:
         return Files()
 
 
-class MediaFileUpload():
+class MediaFileUpload:
     def __init__(self, file, *, resumable=False):
         self.file = file
         self.resumable = resumable

@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from os import path, PathLike
+from os import path
 
 from .api_decorator import APIDecorator
 from .service import MediaFileUpload
@@ -53,7 +53,7 @@ class DriveBase(ABC):
 @APIDecorator.service('drive', 'v3')
 class Drive(DriveBase):
 
-    def upload(self, file: Union[str, PathLike], *args, **kwargs) -> str:
+    def upload(self, file: Union[str], *args, **kwargs) -> str:
         """
         Upload file to google drive
 

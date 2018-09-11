@@ -94,7 +94,20 @@ class OAuth2:
             'Content-Type': 'application/x-www-form-urlencoded'
         })
         result = request.urlopen(req, data=urlencode(query).encode('utf-8'))
-        return json.loads(result.read().decode('utf-8'))
+        token = json.loads(result.read().decode('utf-8'))
+        # self.user_info(token)
+        return token
+
+    def user_info(self, token):
+        # import base64
+        # base64.b64decode(token.get('id_token').split('.')[1])
+        # can be found on https://accounts.google.com/.well-known/openid-configuration
+        url = 'https://www.googleapis.com/oauth2/v3/userinfo'
+        req = request.Request(url, method='GET', headers={
+            'Authorization': 'Bearer {}'.format(token.get('access_token'))
+        })
+        result = request.urlopen(req).read()
+        return result
 
 
 class Credentials:

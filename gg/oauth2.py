@@ -21,7 +21,7 @@ pkl = p + path.sep + r'credentials.pkl'
 SCOPES = (
     'https://www.googleapis.com/auth/drive.file',  # created by this app's files only
     # 'https://www.googleapis.com/auth/drive' # all files
-    'openid'
+    'openid profile'
 )
 
 
